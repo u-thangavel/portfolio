@@ -1,9 +1,8 @@
-# GitHub Actions workflow for automated deployment to GitHub Pages
 name: Deploy Next.js site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main"] # Update to "master" if your default branch is master
 
   workflow_dispatch:
 
@@ -30,7 +29,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build with Next.js
         run: npm run build
