@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/thangavel.github.io',
-  assetPrefix: '/thangavel.github.io/',
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio/',
   images: {
     unoptimized: true,
   },
