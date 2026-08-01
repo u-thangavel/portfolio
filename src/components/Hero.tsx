@@ -43,9 +43,10 @@ function useTypewriter(words: string[], typingSpeed = 50, deletingSpeed = 50, pa
   return displayText;
 }
 
-const codeLines = [
+// Code content for Tab 1
+const baseClassLines = [
   { indent: 0, text: 'public class BaseClass {', color: 'var(--color-kmp)' },
-   { indent: 1, text: ' public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();', color: 'var(--text-secondary)' },
+  { indent: 1, text: ' public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();', color: 'var(--text-secondary)' },
   { indent: 1, text: '@Before', color: '#e6db74' },
   { indent: 1, text: 'public static void launch() {', color: 'var(--text-secondary)' },
   { indent: 2, text: 'if (driver.get() == null) {', color: '#66d9ef' },
@@ -61,10 +62,20 @@ const codeLines = [
   { indent: 3, text: 'driver.remove();  ', color: 'var(--text-secondary)' },
   { indent: 2, text: '}', color: '#66d9ef' },
   { indent: 1, text: '}', color: '#e6db74' },
-
   { indent: 0, text: '}', color: 'var(--color-kmp)' },
 ];
 
+// Code content for Tab 2
+const homePageLines = [
+  { indent: 0, text: 'public class Homepage extends BaseClass {', color: 'var(--color-kmp)' },
+  { indent: 1, text: '@FindBy(xpath = "//android.widget.Button[@text=\'Shop\']")', color: '#e6db74' },
+  { indent: 1, text: 'private WebElement shopButton;', color: 'var(--text-secondary)' },
+  { indent: 1, text: 'public void clickShop() {', color: 'var(--text-secondary)' },
+  { indent: 2, text: 'WebDriverWait wait = new WebDriverWait(driver.get(), Duration.ofSeconds(10));', color: '#66d9ef' },
+  { indent: 2, text: 'wait.until(ExpectedConditions.elementToBeClickable(shopButton)).click();', color: 'var(--text-secondary)' },
+  { indent: 1, text: '}', color: 'var(--text-secondary)' },
+  { indent: 0, text: '}', color: 'var(--color-kmp)' },
+];
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -75,6 +86,20 @@ export default function Hero() {
   const phoneY = useTransform(scrollY, [0, 600], [0, -80]);
   const phoneRotateX = useTransform(scrollY, [0, 600], [8, -5]);
   const phoneRotateY = useTransform(scrollY, [0, 600], [-12, 5]);
+
+  // State to track active tab ('baseclass' or 'homepage')
+  const [activeTab, setActiveTab] = useState<'baseclass' | 'homepage'>('baseclass');
+
+  // Automatically switch tabs every 10 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab((prev) => (prev === 'baseclass' ? 'homepage' : 'baseclass'));
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentCodeLines = activeTab === 'baseclass' ? baseClassLines : homePageLines;
 
   return (
     <section id="home" className={styles.heroSection}>
@@ -162,17 +187,29 @@ export default function Hero() {
             <div className={styles.phoneScreen}>
               <div className={styles.codeEditor}>
                 <div className={styles.editorTabs}>
-                  <span className={styles.editorTabActive}>Baseclass.java</span>
-                  <span className={styles.editorTab}>Homepage.java</span>
+                  <span 
+                    className={activeTab === 'baseclass' ? styles.editorTabActive : styles.editorTab}
+                    onClick={() => setActiveTab('baseclass')}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    Baseclass.java
+                  </span>
+                  <span 
+                    className={activeTab === 'homepage' ? styles.editorTabActive : styles.editorTab}
+                    onClick={() => setActiveTab('homepage')}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    Homepage.java
+                  </span>
                 </div>
-                <div className={styles.codeContent}>
-                  {codeLines.map((line, i) => (
+                <div className={styles.codeContent} key={activeTab}>
+                  {currentCodeLines.map((line, i) => (
                     <motion.div
                       key={i}
                       className={styles.codeLine}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 1.0 + i * 0.08, duration: 0.3 }}
+                      transition={{ delay: i * 0.04, duration: 0.2 }}
                     >
                       <span className={styles.lineNumber}>{i + 1}</span>
                       <span style={{ marginLeft: `${line.indent * 14}px`, color: line.color }}>

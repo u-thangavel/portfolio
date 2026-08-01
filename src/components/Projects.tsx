@@ -35,7 +35,7 @@ const projects = [
     title: "Pillow Talk",
     description: "Created test strategy and automation workflows for a e-commerce app, supporting reliable releases in web platforms.",
     tech: ["Manual Testing", "Agile", "Test Planning", "Postman",  "Reporting"],
-    type: "QA Enginee / 2020-2021",
+    type: "QA Engineer / 2020-2021",
     webLink: "https://www.pillowtalk.com.au/",
     github: "#",
     isPersonal: false,
