@@ -1,13 +1,13 @@
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #121212;
-  --bg-tertiary: #1c1c1c;
+  --bg-primary: #1e293b;
+  --bg-secondary: #192231;
+  --bg-tertiary: #0b0f15;
 
   --text-primary: #ededed;
   --text-secondary: #a1a1aa;
   --text-muted: #52525b;
 
-  --border-color: #27272a;
+  --border-color: #3d1d05;
   --border-hover: #3f3f46;
 
   --accent: #ffffff;
