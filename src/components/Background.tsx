@@ -2,9 +2,8 @@
 
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { FaAndroid, FaApple, FaCode } from 'react-icons/fa';
-import { SiKotlin } from 'react-icons/si';
-import { MdCatchingPokemon } from 'react-icons/md';
+import { FaJava, FaPython, FaCode } from 'react-icons/fa';
+import { SiSelenium ,SiAppium} from 'react-icons/si';
 import styles from './Background.module.css';
 
 export default function Background() {
@@ -25,19 +24,19 @@ export default function Background() {
   return (
     <div className={styles.fixedBackground}>
       <motion.div className={styles.iconWrapper} style={{ top: '15%', left: '10%', y: y1, rotate: r1 }}>
-        <FaAndroid size={120} />
+        <FaJava size={120} />
       </motion.div>
       
       <motion.div className={styles.iconWrapper} style={{ top: '40%', left: '80%', y: y2, rotate: r2 }}>
-        <FaApple size={140} />
+        <FaPython size={140} />
       </motion.div>
       
       <motion.div className={styles.iconWrapper} style={{ top: '70%', left: '15%', y: y3, rotate: r1 }}>
-        <SiKotlin size={100} />
+        <SiSelenium size={100} />
       </motion.div>
 
       <motion.div className={styles.iconWrapper} style={{ top: '25%', left: '60%', y: y4, rotate: r3 }}>
-        <MdCatchingPokemon size={150} />
+        <SiAppium size={150} />
       </motion.div>
 
       <motion.div className={styles.iconWrapper} style={{ top: '80%', left: '75%', y: y5, rotate: r2 }}>
