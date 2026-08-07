@@ -153,18 +153,18 @@ export default function About() {
           {/* Photo 1: Blast from the past (Left) */}
           <motion.div style={{ y: y1 }} className={`${styles.imgWrapper} ${styles.imgPos1}`}>
             <Image
-             src="./Thangavel.jpg"
-             alt="Thangavel U , QA Automation Engineer"
+             src="./Gold.jpg"
+             alt="QA Automation Engineer - 2026"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, 33vw"
             />
-            <div className={styles.imgCaption}>U.Thangavel QA Automation Engineer </div>
+            <div className={styles.imgCaption}>QA Automation Engineer - 2026</div>
           </motion.div>
 
             <motion.div style={{ y: y2 }} className={`${styles.imgWrapper} ${styles.imgPos2}`}>
             <Image
-              src="./Thangavel1.jpg"
+              src="./GoldBlue.jpg"
               alt="Bluefields Technologies Bengaluru - 2021"
               fill
               style={{ objectFit: 'cover' }}
@@ -175,7 +175,7 @@ export default function About() {
         
               <motion.div style={{ y: y3 }} className={`${styles.imgWrapper} ${styles.imgPos3}`}>
             <Image
-              src="./Thangavel3.jpg"
+              src="./GoldTuna.jpg"
               alt="2024 at Tuna Group, Kochi, Kerala"
               fill
               style={{ objectFit: 'cover' }}
