@@ -44,6 +44,7 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   transform-style: preserve-3d;
+   white-space: pre-line;
 }
 
 .card::before {

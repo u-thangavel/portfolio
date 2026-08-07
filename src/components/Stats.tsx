@@ -6,10 +6,10 @@ import { Calendar, Download, Building2, FolderOpen } from 'lucide-react';
 import styles from './Stats.module.css';
 
 const stats = [
-  { label: 'Years Experience', value: 9, suffix: '+', icon: <Calendar size={22} /> },
+  { label: 'Years Experience', value: 11, suffix: '+', icon: <Calendar size={22} /> },
   { label: 'App Downloads', value: 15, suffix: 'M+', icon: <Download size={22} /> },
   { label: 'Companies', value: 4, suffix: '', icon: <Building2 size={22} /> },
-  { label: 'Projects Shipped', value: 3, suffix: '', icon: <FolderOpen size={22} /> },
+  { label: 'Projects Shipped', value: 5, suffix: '', icon: <FolderOpen size={22} /> },
 ];
 
 const hoverPatterns = [

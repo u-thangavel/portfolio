@@ -87,7 +87,7 @@ export default function About() {
 
           <h2 className={styles.heading}>Beyond the Screen</h2>
           <p className={styles.paragraph}>
-            I&apos;m based in Coimbatore, Tamil Nadu. and, being naturally a bit of an introvert, I thrive on deep-focus workflows, often fueled by old-school hip-hop. When I'm offline, I enjoy hearing stories, gaming, and spending quality time with my family.
+            I&apos;m based in Coimbatore, Tamil Nadu. Being naturally more reserved, I thrive in deep‑focus workflows where precision and problem‑solving take center stage. Outside of work, I enjoy spending quality time with my family and keeping life simple and balanced.
           </p>
    
 
@@ -144,7 +144,7 @@ export default function About() {
           >
             <span className={styles.quoteIcon}>&ldquo;</span>
             <p className={styles.songQuote}>Software testing is not about finding bugs; it’s about building confidence in the software’s performance and reliability</p>
-            <span className={styles.artist}>— Martin Fowler</span>
+            <span className={styles.artist}>— Roman Pichler</span>
           </motion.div>
         </motion.div>
 

@@ -90,3 +90,13 @@
     text-align: center;
   }
 }
+.someshLink {
+  font-weight: bold;          /* bold */
+     /* font-style: italic;         /* italic */
+  /*text-decoration: underline;  underline */
+  color: #746474;             /* link color */
+}
+
+.someshLink:hover {
+  color: #21c763;             /* darker shade on hover */
+}

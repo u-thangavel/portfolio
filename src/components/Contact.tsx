@@ -84,11 +84,22 @@ export default function Contact() {
         </motion.div>
 
         <div className={styles.bottomBar}>
-          <p className={styles.copyright}>
-            &copy; {currentYear} Thangavel U. All rights reserved.
-          </p>
+            <p className={styles.copyright}>
+              &copy; {currentYear} Thangavel U. All rights reserved.
+             
+            </p>
           <div className={styles.builtWith}>
-            Built with Next.js, Framer Motion & Vanilla CSS.
+                          <br />
+              Crafted with 🤝{" "}
+              <a
+                href="https://www.thesomeshkumar.co.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.someshLink}
+              >
+                Somesh Kumar
+              </a>{" "}
+            using Next.js, Framer Motion & Vanilla CSS.
           </div>
         </div>
       </div>

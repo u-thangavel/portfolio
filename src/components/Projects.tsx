@@ -8,9 +8,9 @@ import styles from './Projects.module.css';
 
 const projects = [
   {
-    title: "SixFlags",
-    description: "Built and scaled automation coverage for a high-traffic mobile experience, improving regression confidence across Android and iOS releases.",
-    tech: ["Appium", "Selenium", "Java", "Python" ,"API Testing", "Pytest-BDD"],
+    title: "Six Flags Entertainment Corporation",
+    description: "🚀 Built cross‑platform automation frameworks using Appium, Selenium, Java, Python, TestNG, Pytest‑BDD, ensuring reliable regression coverage across Android, iOS, and web.\n \n📊 Validated performance and scalability with JMeter and K6, strengthening confidence in high‑traffic mobile releases.",
+    tech: ["Appium", "Selenium", "Java", "Python" ,"K6","Jmeter","trestNG", "Pytest-BDD"],
     type: "   QA Automation Engineer/2023-2026",
     appStore: "https://apps.apple.com/us/app/six-flags/id988953433",
     playStore: "https://play.google.com/store/apps/details?id=com.sixflags.android",
@@ -21,9 +21,9 @@ const projects = [
   },
   {
     title: "Maya Cinemas Digital ",
-    description: "Delivered automated regression and API testing for a ticket booking app, helping shorten release cycles and improve product stability.",
+    description: "🎬 Automated ticket booking and payment flows with Selenium, Java, TestNG, Cucumber, reducing regression cycle time.\n \n📊🔗 Enhanced API validation using Swagger and Postman, improving stability of integrations and backend services.",
     tech: ["Selenium","Java","Cucumber","TestNG", "Swagger", "Mobile Testing"],
-    type: "QA Engineer / 2021-2023",
+    type: "QA Engineer / 2023-2025",
     appStore: "https://apps.apple.com/us/app/maya-cinemas-tickets/id6770704865",
     playStore: "https://play.google.com/store/apps/details?id=com.indycinemagroup.mayacinemas&pcampaignid=web_share",
     webLink: "https://mayacinemas.com/",
@@ -31,15 +31,38 @@ const projects = [
     isPersonal: false,
     downloads: "600K+"
   },
-  {
+      {
+    title: "Nordstrom Digital Fashion",
+    description: "🛍️ Developed regression suites with Selenium, Java, TestNG, covering shopping, checkout, and account workflows.\n \n📊🔗 📱 Integrated REST API testing and mobile validations to ensure seamless omnichannel customer experiences.",
+    tech: ["Selenium","Java","TestNG", "Rest API", "Mobile Testing"],
+    type: "QA Engineer / 2022-2023",
+    appStore: "https://play.google.com/store/apps/details?id=com.nordstrom.app&pcampaignid=web_share",
+    playStore: "https://apps.apple.com/us/app/nordstrom/id474349412",
+    webLink: "https://www.nordstrom.com/",
+    github: "#",
+    isPersonal: false,
+    downloads: "1000K+"
+  },
+    {
     title: "Pillow Talk",
-    description: "Created test strategy and automation workflows for a e-commerce app, supporting reliable releases in web platforms.",
-    tech: ["Manual Testing", "Agile", "Test Planning", "Postman",  "Reporting"],
-    type: "QA Engineer / 2020-2021",
+    description:"📝 Defined test strategy combining manual testing, Agile practices, and automation (Selenium, Java, Cucumber, TestNG) for e‑commerce workflows.\n \n📊🔗🔒 Strengthened release reliability with Postman API validations and structured test planning across web platforms.",
+    tech: ["Manual Testing", "Agile", "Test Planning", "Postman",  "Selenium","Java","Cucumber","TestNG"],
+    type: "QA Engineer / 2020-2023",
     webLink: "https://www.pillowtalk.com.au/",
     github: "#",
     isPersonal: false,
-    downloads: "35K+"
+    downloads: "120K+"
+  },
+
+  {
+    title: "PMKK & NSDC",
+    description: "🎓 Designed hands‑on modules combining theory with project‑based exercises, ensuring students could apply concepts in real‑world scenarios.,\n\n🤝 Trained 300+ college students and 500+ school students under government schemes (RMSA, NSQF), contributing to national skill development initiatives.",
+    tech: ["Mentorship","Government Scheme Contribution","Curriculum Development", "Training Delivery"],
+    type: "Traineer / 2018-2020",
+    webLink: "",
+    github: "#",
+    isPersonal: false,
+    downloads: "V2"
   }
 ];
 
@@ -78,7 +101,9 @@ function PhoneCard({ project, idx }: { project: typeof projects[number]; idx: nu
         </div>
 
         <h3 className={styles.cardTitle}>{project.title}</h3>
-        <p className={styles.cardDesc}>{project.description}</p>
+        <p className={styles.highlights}>{project.description}</p>
+
+        
 
         <div className={styles.techStack}>
           {project.tech.map((t: string) => (
