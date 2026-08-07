@@ -157,7 +157,7 @@
   height: 180px;
   right: 10px;
   top: 10px;
-  border-radius: var(--radius-full); /* Make it a circle! */
+ /*border-radius: var(--radius-full);  Make it a circle! */
   z-index: 3;
 }
 

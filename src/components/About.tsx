@@ -65,6 +65,7 @@ export default function About() {
     offset: ["start end", "end start"]
   });
 
+
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -120]);
   const y3 = useTransform(scrollYProgress, [0, 1], [0, -20]);
@@ -150,9 +151,9 @@ export default function About() {
 
         <div className={styles.imagesGrid}>
           {/* Photo 1: Blast from the past (Left) */}
-          <motion.div style={{ y: y3 }} className={`${styles.imgWrapper} ${styles.imgPos1}`}>
+          <motion.div style={{ y: y1 }} className={`${styles.imgWrapper} ${styles.imgPos1}`}>
             <Image
-             src="./thangavel.jpg"
+             src="./Thangavel.jpg"
              alt="Thangavel U , QA Automation Engineer"
              
               fill
@@ -162,9 +163,27 @@ export default function About() {
             <div className={styles.imgCaption}>U.Thangavel QA Automation Engineer </div>
           </motion.div>
 
-          {/* Photo 2: Personal Photo (Top Right) */}
+            <motion.div style={{ y: y2 }} className={`${styles.imgWrapper} ${styles.imgPos2}`}>
+            <Image
+              src="./Thangavel1.jpg"
+              alt="Bluefields Technologies Bengaluru - 2021"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <div className={styles.imgCaption}>Bluefields Technologies Bengaluru - 2021</div>
+          </motion.div>
         
-          {/* Photo 3: Travel / Personal (Bottom Right) */}
+              <motion.div style={{ y: y3 }} className={`${styles.imgWrapper} ${styles.imgPos3}`}>
+            <Image
+              src="./Thangavel3.jpg"
+              alt="2024 at Tuna Group, Kochi, Kerala"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <div className={styles.imgCaption}>Tuna Group, Kochi, Kerala - 2024</div>
+          </motion.div>
 
 
         </div>
