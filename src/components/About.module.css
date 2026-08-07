@@ -144,20 +144,24 @@
 
 /* Image 1: Main left side */
 .imgPos1 {
-  width: 340px;
+  width: 240px;
   height: 240px;
   left: -20px;
   top: 100px;
+  border-radius: var(--radius-full); /* Make it a circle! */
   z-index: 2;
+}
+.imgPos1:hover {
+  border-radius: var(--radius-lg);
 }
 
 /* Image 2: Top Right slightly smaller */
 .imgPos2 {
-  width: 180px;
-  height: 180px;
+  width: 240px;
+  height: 240px;
   right: 10px;
   top: 10px;
- /*border-radius: var(--radius-full);  Make it a circle! */
+border-radius: var(--radius-full); /* Make it a circle! */
   z-index: 3;
 }
 
@@ -168,10 +172,14 @@
 /* Image 3: Bottom Right overlapping */
 .imgPos3 {
   width: 240px;
-  height: 260px;
+  height: 240px;
   right: 50px;
   bottom: 20px;
+  border-radius: var(--radius-full); /* Make it a circle! */
   z-index: 1;
+}
+.imgPos3:hover {
+  border-radius: var(--radius-lg);
 }
 
 .imgCaption {
