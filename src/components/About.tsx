@@ -153,7 +153,7 @@ export default function About() {
           {/* Photo 1: Blast from the past (Left) */}
           <motion.div style={{ y: y1 }} className={`${styles.imgWrapper} ${styles.imgPos1}`}>
             <Image
-             src="/Thangavel.jpg"
+             src="./Thangavel.jpg"
              alt="Thangavel U , QA Automation Engineer"
               fill
               style={{ objectFit: 'cover' }}
