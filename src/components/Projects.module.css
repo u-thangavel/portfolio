@@ -35,14 +35,14 @@
   background: var(--card-surface);
   border: 1px solid var(--border-color);
   border-radius: 24px;
-  padding: 50px var(--space-lg) var(--space-lg);
   height: 500px;
+  padding: 40px var(--space-lg) var(--space-lg);
   display: flex;
   flex-direction: column;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   transform-style: preserve-3d;
    white-space: pre-line;
 }
@@ -105,22 +105,27 @@
   border: 1px solid rgba(127, 82, 255, 0.3);
 }
 
-.projectType {
-  font-size: 0.8rem;
+.projectTypeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the text */
+  text-align: center;
+  width: 100%;
+}
+
+.projectRole {
+  font-size: 0.95rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--text-muted);
-  
-  /* Layout constraints */
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
+  color: var(--text-primary);
+}
 
-  /* Alignment */
-  display: flex;
-  align-items: center; /* Vertically centers the text */
-  justify-content: center; /* Horizontally centers the text */
+.projectDuration {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: 2px;
 }
 
 
@@ -170,8 +175,9 @@
 
 .cardTitle {
   font-size: 1.4rem;
-  margin: 0 0 var(--space-sm) 0;
   font-weight: 700;
+  margin: 0 0 var(--space-sm) 0;
+
 }
 
 .cardDesc {
@@ -186,7 +192,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
-  margin-bottom: var(--space-lg);
+  margin-top: auto;     /* small gap above */
+  margin-bottom: var(--space-md);   /* remove big gap below */
+}
+
+.techStack:empty {
+  display: none;
+  margin: 0;
 }
 
 .techBadge {
@@ -197,6 +209,7 @@
   font-size: 0.8rem;
   color: var(--text-secondary);
   transition: all 0.3s ease;
+  
 }
 
 .techBadge:hover {
@@ -206,13 +219,13 @@
 }
 
 .cardFooter {
-  margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid var(--border-color);
   padding-top: var(--space-md);
   position: relative;
+  margin-top: 0;
   z-index: 5;
 }
 
@@ -260,3 +273,4 @@
   color: var(--color-kmp);
   transform: scale(1.15);
 }
+

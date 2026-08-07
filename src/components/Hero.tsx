@@ -9,8 +9,9 @@ import styles from './Hero.module.css';
 
 const roles = [
   'Mobile & Web QA Expert',
-  'API Performance Engineer',
-  'Automation Architect',
+  'Manual & Automation Tester',
+  'Regression & Release Guardian',
+  'Cross‑Platform QA Specialist',
 ];
 
 const views = [
@@ -73,7 +74,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentViewIndex((prev) => (prev + 1) % views.length);
-    }, 6000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -229,7 +230,7 @@ export default function Hero() {
                         transition={{ delay: 0.2 }}
                         style={{ background: '#1e1e2e', padding: '10px 14px', borderRadius: '8px', border: '1px solid #313244' }}
                       >
-                        <div style={{ fontSize: '10px', color: '#6c7086' }}>https://github.com › u-thangavel</div>
+                        <div style={{ fontSize: '10px', color: '#6c7086' }}>https://github.com/u-thangavel</div>
                         <div style={{ fontSize: '13px', color: '#89b4fa', fontWeight: 600, marginTop: '2px' }}>Scalable TestNG & Selenium Framework</div>
                         <div style={{ fontSize: '11px', color: '#a6e3a1', marginTop: '2px' }}>✓ Parallel execution, Page Object Model implemented.</div>
                       </motion.div>
