@@ -5,6 +5,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, BriefcaseBusiness } from 'lucide-react';
 import styles from './Experience.module.css';
+//   {"Manage the Journey section content -"Behind the Code","Beyond the Screen","Technical Arsenal","Quotes","Photo" }
 
 const journey = [
   {

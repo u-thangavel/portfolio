@@ -2,14 +2,17 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaGithub, FaLinkedinIn, FaFileAlt } from 'react-icons/fa';
 import { Phone } from 'lucide-react';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import styles from './Contact.module.css';
+//   {"Manage the Contact section in bottom -"Below all the items Let's Build Together" }
 
 const socials = [
   { Icon: FaGithub, href: "https://github.com/u-thangavel", label: "GitHub" },
   { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/thangavel-uthaya-kumar-35b8b0274", label: "LinkedIn" },
-  { Icon: Phone, href: "tel:+918870344201", label: "Phone" }
+  { Icon: Phone, href: "tel:+918870344201", label: "Phone" },
+  { Icon: FaFileAlt, href: "./resume.pdf", label: "Resume" }
+
 ];
 
 export default function Contact() {
@@ -58,10 +61,15 @@ export default function Contact() {
           </motion.a>
 
           <div className={styles.socials}>
-            {socials.map((social, idx) => (
+            {socials.map(({ Icon, href, label }, idx) => (
               <motion.a
-                key={social.label}
-                href={social.href}
+                key={label}
+                href={href}
+                {...(!href.startsWith('tel:') && {
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                })}
+                download={label === "Resume" ? "Thangavel_Udhayakumar_Resume.pdf" : undefined}
                 className={styles.socialIcon}
                 initial={{ opacity: 0, y: 20, scale: 0.8 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -75,9 +83,9 @@ export default function Contact() {
                 }}
                 whileHover={{ y: -6, scale: 1.15, borderColor: 'var(--color-kmp)' }}
                 whileTap={{ scale: 0.9 }}
-                aria-label={social.label}
+                aria-label={label}
               >
-                <social.Icon size={24} />
+                <Icon size={24} />
               </motion.a>
             ))}
           </div>
@@ -86,19 +94,18 @@ export default function Contact() {
         <div className={styles.bottomBar}>
             <p className={styles.copyright}>
               &copy; {currentYear} Thangavel U. All rights reserved.
-             
             </p>
           <div className={styles.builtWith}>
-                          <br />
-              Crafted with 🤝{" "}
-              <a
-                href="https://www.thesomeshkumar.co.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.someshLink}
-              >
-                Somesh Kumar
-              </a>{" "}
+            <br />
+            Crafted with 🤝{" "}
+            <a
+              href="https://www.thesomeshkumar.co.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.someshLink}
+            >
+              Somesh Kumar
+            </a>{" "}
             using Next.js, Framer Motion & Vanilla CSS.
           </div>
         </div>

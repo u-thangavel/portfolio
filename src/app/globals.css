@@ -66,36 +66,36 @@
   color-scheme: dark;
 }
 
-html[data-theme='light'] {
-  --bg-primary: #f7f8fc;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #eef1f8;
+html[data-theme='cloud'] {
+  --bg-primary: #ece7d9;
+  --bg-secondary: #c9c5b9;
+  --bg-tertiary: #848177;
 
   --text-primary: #131720;
-  --text-secondary: #3a4150;
+  --text-secondary: #232a38;
   --text-muted: #6e778a;
 
   --border-color: #d8deea;
   --border-hover: #b7c0d1;
 
-  --accent: #0f172a;
+  --accent: #32363e;
   --accent-glow: rgba(15, 23, 42, 0.08);
 
   --card-surface: linear-gradient(145deg, rgba(255, 255, 255, 0.96) 0%, rgba(241, 244, 251, 0.98) 100%);
   --header-bg: rgba(247, 248, 252, 0.8);
   --header-bg-scrolled: rgba(247, 248, 252, 0.94);
   --noise-opacity: 0.014;
-  --year-display-color: rgba(19, 23, 32, 0.82);
+  --year-display-color: rgba(21, 26, 39, 0.82);
   --photo-caption-bg: rgba(255, 255, 255, 0.86);
   --photo-caption-border: rgba(19, 23, 32, 0.12);
   --phone-shell-bg: linear-gradient(145deg, #f3f7ff 0%, #e5ebf7 100%);
-  --phone-shell-border: #cdd6e8;
+  --phone-shell-border: #870707;
   --phone-shell-shadow:
     0 26px 56px rgba(56, 72, 96, 0.18),
     0 0 0 1px rgba(19, 23, 32, 0.08),
     inset 0 0 0 1px rgba(255, 255, 255, 0.7),
     0 0 34px rgba(127, 82, 255, 0.1);
-  --phone-notch-bg: #d8dfec;
+  --phone-notch-bg: #6c685d;
   --phone-notch-detail: #bcc8db;
   --phone-editor-bg: #f9fbff;
   --phone-editor-border: rgba(19, 23, 32, 0.12);

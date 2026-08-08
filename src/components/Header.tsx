@@ -2,22 +2,25 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone } from 'lucide-react';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { Menu, X, Phone,Mail } from 'lucide-react';
+import { FaGithub, FaLinkedinIn, FaFileAlt } from 'react-icons/fa';
 import ThemeToggle from './ThemeToggle';
 import styles from './Header.module.css';
 
 const navLinks = [
-  { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'About', href: '#about' },
   { name: 'Contact', href: '#contact' },
 ];
 
 const socialLinks = [
   { Icon: FaGithub, href: "https://github.com/u-thangavel", label: "GitHub" },
   { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/thangavel-uthaya-kumar-35b8b0274", label: "LinkedIn" },
-  { Icon: Phone, href: "tel:+918870344201", label: "Phone" }
+    { Icon: Phone, href: "tel:+918870344201", label: "Phone" },
+    { Icon: Mail, href: "mailto:uthayakumar.thangavel@outlook.com", label: "Email" },
+  { Icon: FaFileAlt, href: "./resume.pdf", label: "Resume" }
+
 ];
 
 export default function Header() {
@@ -94,22 +97,25 @@ export default function Header() {
             </nav>
 
             <div className={styles.socialsDesktop}>
-              {socialLinks.map((social, idx) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  className={styles.socialIcon}
-                  aria-label={social.label}
-                  target={social.href.startsWith('http') ? '_blank' : undefined}
-                  rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  initial={false}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.45 + idx * 0.06, duration: 0.35 }}
-                  whileHover={{ y: -3, scale: 1.08 }}
-                >
-                  <social.Icon size={14} />
-                </motion.a>
-              ))}
+              {socialLinks.map((social, idx) => {
+                const isExternal = social.href.startsWith('http') || social.label === 'Resume';
+                return (
+                  <motion.a
+                    key={social.label}
+                    href={social.href}
+                    className={styles.socialIcon}
+                    aria-label={social.label}
+                    target={isExternal ? '_blank' : undefined}
+                    rel={isExternal ? 'noopener noreferrer' : undefined}
+                    initial={false}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.45 + idx * 0.06, duration: 0.35 }}
+                    whileHover={{ y: -3, scale: 1.08 }}
+                  >
+                    <social.Icon size={14} />
+                  </motion.a>
+                );
+              })}
             </div>
           </div>
 
@@ -157,19 +163,22 @@ export default function Header() {
               ))}
 
               <div className={styles.mobileSocials}>
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    className={styles.mobileSocialIcon}
-                    aria-label={social.label}
-                    target={social.href.startsWith('http') ? '_blank' : undefined}
-                    rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    <social.Icon size={18} />
-                  </a>
-                ))}
+                {socialLinks.map((social) => {
+                  const isExternal = social.href.startsWith('http') || social.label === 'Resume';
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      className={styles.mobileSocialIcon}
+                      aria-label={social.label}
+                      target={isExternal ? '_blank' : undefined}
+                      rel={isExternal ? 'noopener noreferrer' : undefined}
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      <social.Icon size={18} />
+                    </a>
+                  );
+                })}
               </div>
             </motion.nav>
           </motion.div>

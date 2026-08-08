@@ -1,17 +1,17 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Cloud } from 'lucide-react';
 import styles from './ThemeToggle.module.css';
 
-type Theme = 'dark' | 'light';
+type Theme = 'dark' | 'cloud';
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window === 'undefined') return 'dark';
     const saved = window.localStorage.getItem('theme');
-    if (saved === 'dark' || saved === 'light') return saved;
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    if (saved === 'dark' || saved === 'cloud') return saved;
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'cloud' : 'dark';
   });
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function ThemeToggle() {
   }, [theme]);
 
   const toggleTheme = () => {
-    const next: Theme = theme === 'dark' ? 'light' : 'dark';
+    const next: Theme = theme === 'dark' ? 'cloud' : 'dark';
     setTheme(next);
     document.documentElement.dataset.theme = next;
     window.localStorage.setItem('theme', next);
@@ -30,10 +30,10 @@ export default function ThemeToggle() {
       type="button"
       className={styles.themeToggle}
       onClick={toggleTheme}
-      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-      title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+      aria-label={`Switch to ${theme === 'dark' ? 'cloud' : 'dark'} mode`}
+      title={`Switch to ${theme === 'dark' ? 'cloud' : 'dark'} mode`}
     >
-      {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+      {theme === 'dark' ? <Cloud size={16} /> : <Moon size={16} />}
     </button>
   );
 }

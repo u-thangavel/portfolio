@@ -5,16 +5,16 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Smartphone, Download } from 'lucide-react';
 import { FaGithub, FaGooglePlay, FaApple } from 'react-icons/fa';
 import styles from './Projects.module.css';
-
+//{Contain project info }
 const projects = [
   {
     title: "Six Flags Entertainment Corporation",
     description:["🚀 Built cross‑platform automation frameworks using Appium, Selenium, Java, Python, TestNG, Pytest‑BDD, ensuring reliable regression coverage across Android, iOS, and web.",
       "📊 Validated performance and scalability with JMeter and K6, strengthening confidence in high‑traffic mobile releases. "
     ],
-    tech: ["Appium", "Selenium", "Java", "Python", "K6", "Jmeter", "TestNG", "Pytest-BDD"],
-    role: "QA Automation Engineer",
-    duration: "2023-2026",
+    tech: ["Appium", "Selenium", "Java", "Python", "K6",  "TestNG", "Pytest-BDD","Postman"],
+    role: "Web | Mobile | Kiosk | API",
+    duration: "NOV 2023 - PRESENT",
     appStore: "https://apps.apple.com/us/app/six-flags/id988953433",
     playStore: "https://play.google.com/store/apps/details?id=com.sixflags.android",
     webLink: "https://www.sixflags.com",
@@ -28,9 +28,9 @@ const projects = [
       "🎬 Automated ticket booking and payment flows with Selenium, Java, TestNG, Cucumber, reducing regression cycle time.",
       "📊 Enhanced API validation using Swagger and Postman, improving stability of integrations and backend services."
     ],
-    tech: ["Selenium", "Appium", "Java", "Cucumber", "TestNG", "Swagger"],
-    role: "QA Automation Engineer",
-    duration: "2023-2025",
+    tech: ["Selenium", "Appium", "Java","Jmeter", "Cucumber", "TestNG", "Swagger"],
+    role: "Web | Mobile | Kiosk | API",
+    duration: "NOV 2023- OCT 2025",
     appStore: "https://apps.apple.com/us/app/maya-cinemas-tickets/id6770704865",
     playStore: "https://play.google.com/store/apps/details?id=com.indycinemagroup.mayacinemas&pcampaignid=web_share",
     webLink: "https://mayacinemas.com/",
@@ -45,8 +45,8 @@ const projects = [
       "📊🔗 📱 Integrated REST API testing and mobile validations to ensure seamless omnichannel customer experiences."
     ],
      tech: ["Selenium", "Java", "TestNG", "Rest API", "Mobile Testing"],
-    role: "QA Engineer",
-    duration: "2022-2023",
+    role: "Web | Mobile | API",
+    duration: "MAY 2022 - OCT 2023",
     appStore: "https://play.google.com/store/apps/details?id=com.nordstrom.app&pcampaignid=web_share",
     playStore: "https://apps.apple.com/us/app/nordstrom/id474349412",
     webLink: "https://www.nordstrom.com/",
@@ -60,9 +60,9 @@ const projects = [
       "📝 Defined test strategy combining manual testing, Agile practices, and automation (Selenium, Java, Cucumber, TestNG) for e‑commerce workflows.",
       "📊 Strengthened release reliability with Postman API validations and structured test planning across web platforms."
     ],
-    tech: ["Manual Testing", "Agile", "Test Planning", "Postman", "Selenium", "Java", "Cucumber", "TestNG"],
-    role: "QA Engineer",
-    duration: "2020-2023",
+    tech: ["Manual Testing", "Agile", "Test Case", "Selenium", "Java", "Cucumber", "TestNG"],
+    role: "Web",
+    duration: "DEC 2020 - OCT 2023",
     webLink: "https://www.pillowtalk.com.au/",
     github: "#",
     isPersonal: false,
@@ -76,7 +76,8 @@ const projects = [
       "🤝 Trained 300+ college students and 500+ school students under government schemes (RMSA, NSQF), contributing to national skill development initiatives."
     ],
     tech: ["Mentorship", "Government Scheme Contribution", "Curriculum Development", "Training Delivery"],
-    type: "Traineer / 2018-2020",
+        role: "Traineer",
+    duration: "SEP 2018 - FEB 2020",
     webLink: "",
     github: "#",
     isPersonal: false,

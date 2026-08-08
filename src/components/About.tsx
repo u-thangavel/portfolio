@@ -8,6 +8,8 @@ import { SiKotlin, SiSwift, SiFirebase, SiJira, SiPython, SiSelenium, SiAppium, 
 import { Code2, Smartphone, Layers, Database, Wrench } from 'lucide-react';
 import styles from './About.module.css';
 import { GiJamesBondAperture } from 'react-icons/gi';
+//   {"Manage the About section content -"Below Journey By Year organization profile only " }
+
 
 const skillCategories = [
   {
