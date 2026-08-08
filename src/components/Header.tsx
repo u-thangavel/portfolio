@@ -5,6 +5,8 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-
 import { Menu, X, Phone,Mail } from 'lucide-react';
 import { FaGithub, FaLinkedinIn, FaFileAlt } from 'react-icons/fa';
 import ThemeToggle from './ThemeToggle';
+
+
 import styles from './Header.module.css';
 
 const navLinks = [
@@ -118,6 +120,16 @@ export default function Header() {
                 );
               })}
             </div>
+          </div>
+          <div className={styles.rightControls}>
+           
+            <button
+              className={styles.hamburger}
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
       </motion.header>
