@@ -119,17 +119,6 @@ export default function Header() {
               })}
             </div>
           </div>
-
-          <div className={styles.rightControls}>
-            <ThemeToggle />
-            <button
-              className={styles.hamburger}
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle menu"
-            >
-              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
         </div>
       </motion.header>
 

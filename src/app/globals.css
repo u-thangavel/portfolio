@@ -67,44 +67,60 @@
 }
 
 html[data-theme='cloud'] {
-  --bg-primary: #ece7d9;
-  --bg-secondary: #c9c5b9;
-  --bg-tertiary: #848177;
+  /* Backgrounds */
+  --bg-primary: #a6bddc;   /* 60% lighter than dark */
+  --bg-secondary: #dce3eb; /* lighter panel background */
+  --bg-tertiary: #f2f5f9;  /* near-white for cards */
 
-  --text-primary: #131720;
-  --text-secondary: #232a38;
-  --text-muted: #6e778a;
+  /* Text */
+  --text-primary: #1f2b3d; /* keep dark base for contrast */
+  --text-secondary: #3a4658; /* softer slate */
+  --text-muted: #6e778a;    /* muted gray-blue */
 
-  --border-color: #d8deea;
-  --border-hover: #b7c0d1;
+  /* Borders */
+  --border-color: #b7c0d1;
+  --border-hover: #92a0b5;
 
-  --accent: #32363e;
-  --accent-glow: rgba(15, 23, 42, 0.08);
+  /* Accents */
+  --accent: #4E65FF; /* your cloud gradient start */
+  --accent-glow: rgba(78, 101, 255, 0.15);
+  --primarygradient-: linear-gradient(135deg, #4E65FF, #92EFFD);
+  /* Surfaces */
+  --card-surface: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(241, 244, 251, 0.98) 100%
+  );
+  --header-bg: rgba(201, 211, 224, 0.8);
+  --header-bg-scrolled: rgba(201, 211, 224, 0.94);
 
-  --card-surface: linear-gradient(145deg, rgba(255, 255, 255, 0.96) 0%, rgba(241, 244, 251, 0.98) 100%);
-  --header-bg: rgba(247, 248, 252, 0.8);
-  --header-bg-scrolled: rgba(247, 248, 252, 0.94);
-  --noise-opacity: 0.014;
-  --year-display-color: rgba(21, 26, 39, 0.82);
+  /* Utility */
+  --noise-opacity: 0.012;
+  --year-display-color: rgba(31, 43, 61, 0.82);
   --photo-caption-bg: rgba(255, 255, 255, 0.86);
-  --photo-caption-border: rgba(19, 23, 32, 0.12);
-  --phone-shell-bg: linear-gradient(145deg, #f3f7ff 0%, #e5ebf7 100%);
-  --phone-shell-border: #870707;
+  --photo-caption-border: rgba(31, 43, 61, 0.12);
+
+  /* Phone shell styling */
+  --phone-shell-bg: linear-gradient(145deg, #4E65FF 0%, #06171a 100%);
+  --phone-shell-border: #4E65FF;
   --phone-shell-shadow:
     0 26px 56px rgba(56, 72, 96, 0.18),
-    0 0 0 1px rgba(19, 23, 32, 0.08),
+    0 0 0 1px rgba(31, 43, 61, 0.08),
     inset 0 0 0 1px rgba(255, 255, 255, 0.7),
-    0 0 34px rgba(127, 82, 255, 0.1);
-  --phone-notch-bg: #6c685d;
-  --phone-notch-detail: #bcc8db;
+    0 0 34px rgba(78, 101, 255, 0.1);
+
+  --phone-notch-bg: #c9d3e0;
+  --phone-notch-detail: #92EFFD;
   --phone-editor-bg: #f9fbff;
-  --phone-editor-border: rgba(19, 23, 32, 0.12);
-  --phone-editor-tab-border: rgba(19, 23, 32, 0.12);
-  --phone-home-bar: rgba(19, 23, 32, 0.24);
-  --phone-float-border: rgba(19, 23, 32, 0.12);
+  --phone-editor-border: rgba(31, 43, 61, 0.12);
+  --phone-editor-tab-border: rgba(31, 43, 61, 0.12);
+  --phone-home-bar: rgba(31, 43, 61, 0.24);
+  --phone-float-border: rgba(31, 43, 61, 0.12);
   --phone-float-apple: #4f5d75;
+
   color-scheme: light;
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -243,3 +259,4 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
